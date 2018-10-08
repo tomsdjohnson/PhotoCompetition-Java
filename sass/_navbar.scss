@@ -1,8 +1,11 @@
 // Partial for the Nav Bar
 
 .navbar {
-  background-color: #DDDDDD;
+  background-color: dar;
   height: 64px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+  position: relative;
+
 }
 
 .navbar-list {

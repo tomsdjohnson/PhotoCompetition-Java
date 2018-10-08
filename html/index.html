@@ -24,8 +24,9 @@
 <body>
 
 <!-- Navigation bar -->
-<nav class="navbar main-content">
+<nav class="navbar">
     <ul class="navbar-list">
+        <img class="logo" src="logo.png">
         <li class="navbar-item"><a class="navbar-title" href="index.html">Photo Competition</a></li>
         <li class="navbar-item"><a class="navbar-link" href="about.html">About</a></li>
     </ul>
@@ -33,7 +34,25 @@
 
 <!-- Page content -->
 <div class="main-content">
-    <h1 class="page-title">Photo Competition</h1>
+
+    <table class="image-details">
+        <tbody>
+        <h1>
+        <tr>
+            <td><b>Name</b></td>
+            <td>TODO: Fill in image details.</td>
+        </tr>
+        </h1>
+        <tr>
+            <td><b>Author</b></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>Licence</b></td>
+            <td>TODO: Fill in licence details.</td>
+        </tr>
+        </tbody>
+    </table>
 
     <div class="image-container">
         <!-- src and alt attribute will be populated by index.js on page load -->
@@ -41,26 +60,11 @@
     </div>
 
     <div class="voting-buttons">
-        <button class="voting-button vote-up">I love it</button>
-        <button class="voting-button vote-down">I hate it</button>
+        <button class="voting-button vote-up"><img class="thumbs" src="icons8-thumbs-up-96.png"></button>
+        <button class="voting-button vote-down"><img class="thumbs" src="icons8-thumbs-down-96.png"></button>
     </div>
 
-    <table class="image-details">
-        <tbody>
-            <tr>
-                <td><b>Author</b></td>
-                <td>TODO: Fill in author details.</td>
-            </tr>
-            <tr>
-                <td><b>Name</b></td>
-                <td>TODO: Fill in image details.</td>
-            </tr>
-            <tr>
-                <td><b>Licence</b></td>
-                <td>TODO: Fill in licence details.</td>
-            </tr>
-        </tbody>
-    </table>
+
 </div>
 
 </body>
