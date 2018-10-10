@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!-- Essential meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Softwire Web Development Training Example">
+    <meta name="author" content="Softwire">
+
+    <!-- Title -->
+    <title>Photo Competition - Top</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../stylesheets/common.css">
+
+    <!-- Vendor JS -->
+    <script src="../js/vendor/jquery-3.3.1.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/common.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation bar -->
+<nav class="navbar">
+    <div class="navbar-item"><span style="display: inline-block;" class="logo-text">PhotoCompetition</span><img style="display: inline-block;" class="logo" src="logo.png"></div>
+    <div class="navbar-item"><a class="vote" href="index.html">Photo Vote</a> <a class="top" href="top.html">Top Photos</a></div>
+    <div class="navbar-item"><a class="about" href="about.html">About</a></div>
+</nav>
+
+<!-- Page content -->
+<div class="main-content">
+
+    <div class="heading">
+        <span class="title" style="display: inline-block;" id="image-name"></span>
+        <div class="info">
+            <button class="info"><img class="thumbs" style="display: inline-block;" src="menu_icon.png"></button>
+            <div class="dropdown-content">
+                <b>Author: </b><p id="image-author"></p>
+                <b>Licence: </b><p id="image-license"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container">
+        <!-- src and alt attribute will be populated by index.js on page load -->
+        <img id="main-image" src="">
+    </div>
+</div>
+
+</body>
+</html>

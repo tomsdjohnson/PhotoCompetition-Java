@@ -26,17 +26,22 @@
 <!-- Navigation bar -->
 <nav class="navbar">
     <div class="navbar-item"><span style="display: inline-block;" class="logo-text">PhotoCompetition</span><img style="display: inline-block;" class="logo" src="logo.png"></div>
-    <div class="navbar-item"><a class="vote" href="index.html">Photo Vote</a> <a class="top" href="index.html">Top Photos</a></div>
+    <div class="navbar-item"><a class="vote" href="index.html">Photo Vote</a> <a class="top" href="top.html">Top Photos</a></div>
     <div class="navbar-item"><a class="about" href="about.html">About</a></div>
 </nav>
 
 <!-- Page content -->
 <div class="main-content">
 
-    <div>
-        <h1 class="title" style="display: inline-block;">We live in a society...</h1>
-        <button class="info"><img class="thumbs" style="display: inline-block;" src="menu_icon.png"></button>
-
+    <div class="heading">
+        <span class="title" style="display: inline-block;" id="image-name"></span>
+        <div class="info">
+            <button class="info"><img class="thumbs" style="display: inline-block;" src="menu_icon.png"></button>
+            <div class="dropdown-content">
+                <b>Author: </b><p id="image-author"></p>
+                <b>Licence: </b><p id="image-license"></p>
+            </div>
+        </div>
     </div>
 
     <div class="image-container">
@@ -45,8 +50,8 @@
     </div>
 
     <div class="voting-buttons">
-        <button class="voting-button vote-up"><img class="thumbs" src="vote_up.png"></button>
-        <button class="voting-button vote-down"><img class="thumbs" src="vote_down.png"></button>
+        <button onclick="voteUp()" class="voting-button vote-up"><img class="thumbs" src="vote_up.png"></button>
+        <button onclick="voteDown()" class="voting-button vote-down"><img class="thumbs" src="vote_down.png"></button>
     </div>
 
 
