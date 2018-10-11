@@ -16,6 +16,11 @@
 
     <!-- Vendor JS -->
     <script src="../js/vendor/jquery-3.3.1.js"></script>
+
+    <!-- Custom JS -->
+    <script src="../js/common.js"></script>
+    <script src="../js/upload.js"></script>
+
 </head>
 
 <body>
@@ -32,10 +37,13 @@
     <h1 class="page-title">About</h1>
 
     <div>
-        <input type="file" onchange="uploadImage()"><br>
-        <input type="text">
-        <input type="text">
-        <input type="text">
+        <form id="upload-form">
+            <input type="file" id="file-box"><br>
+            Name: <input type="text" id="name">
+            Author: <input type="text" id="author">
+            License: <input type="text" id="license">
+            <input type="submit" value="Go!">
+        </form>
     </div>
 </div>
 
