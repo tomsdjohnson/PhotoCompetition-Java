@@ -2,22 +2,42 @@
 // JavaScript for use with the index page.
 
 
-$(function() {
-    $('#upload-form')
-        .submit(function(event) {
-            console.log("hello");
+function upload() {
+    console.log("hello");
 
-            var formData = new FormData();
-            
+    var formData = new FormData();
+
+    var fileField = document.querySelector("input[type='file']");
 
 
-            $.post( buildUrl(""), data, function() {
-                console.log("uploaded");
-            });
+    console.log(fileField);
 
-            event.preventDefault();
-        });
+    var author = $('input#author').val();
+    var name = $('input#name').val();
+    var license = $('input#license').val();
 
-});
+    var metaData = {
+        author: author,
+        name: name,
+        license: license
+    };
 
+    var stringData = JSON.stringify(metaData);
+    var blob = new Blob([stringData], {type: "application/json"});
+
+    formData.append("rawdata", fileField.files[0]);
+    formData.append("metadata", blob);
+
+    // $.post(buildUrl(""), formData, function () {
+    //     console.log("uploaded");
+    // });
+
+    fetch(buildUrl(""), {
+        method: "POST",
+        body: formData
+    });
+
+
+    return false;
+}
 
