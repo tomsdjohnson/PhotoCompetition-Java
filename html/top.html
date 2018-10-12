@@ -19,6 +19,7 @@
     <!-- Custom JS -->
     <script src="../js/common.js"></script>
     <script src="../js/top.js"></script>
+    <script src="../js/delete.js"></script>
 </head>
 
 <body>
@@ -39,12 +40,12 @@
             <div class="dropdown-content">
                 <b>Author: </b><p id="image-author"></p>
                 <b>Licence: </b><p id="image-license"></p>
+                <input type="submit" onclick="return end();" value="Delete">
             </div>
         </div>
     </div>
 
     <div class="image-container">
-        <!-- src and alt attribute will be populated by index.js on page load -->
         <img id="main-image" src="">
     </div>
 

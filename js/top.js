@@ -52,7 +52,7 @@ function loadtopImage() {
                 console.log(imageIdx);
 
                 $('#the-rest').append('\n' +
-                    '<div class="image-wrapper">\n' +
+                    '<div class="image-wrapper" id="wrapper' + json[imageIdx].id + '">\n' +
                     '    <div class="secondary-content">\n' +
                     '        <div class="heading">\n' +
                     '            <span class="title" style="display: inline-block;" id="image-name">'+ json[imageIdx].name + '</span>\n' +
@@ -61,12 +61,12 @@ function loadtopImage() {
                     '                <div class="dropdown-content">\n' +
                     '                    <b>Author: </b><p id="image-author">'+ json[imageIdx].author + '</p>\n' +
                     '                    <b>Licence: </b><p id="image-license">'+ json[imageIdx].license + '</p>\n' +
+                    '                    <input type="submit" onclick="return end(' + json[imageIdx].id + ');" value="Delete">\n' +
                     '                </div>\n' +
                     '            </div>\n' +
                     '        </div>\n' +
                     '\n' +
                     '        <div class="image-container">\n' +
-                    '            <!-- src and alt attribute will be populated by index.js on page load -->\n' +
                     '            <img id="main-image" src="'+ json[imageIdx].url + '">\n' +
                     '        </div>\n' +
                     '\n' +
