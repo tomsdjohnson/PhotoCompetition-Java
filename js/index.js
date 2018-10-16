@@ -41,6 +41,7 @@ function voteUp() {
     $.post( buildUrl("/id/" + storeId + "/vote/up"), function( data ) {
         $( ".result" ).html( data );
     });
+
     loadRandomImage()
 }
 

@@ -28,10 +28,6 @@ function upload() {
     formData.append("rawdata", fileField.files[0]);
     formData.append("metadata", blob);
 
-    // $.post(buildUrl(""), formData, function () {
-    //     console.log("uploaded");
-    // });
-
     fetch(buildUrl(""), {
         method: "POST",
         body: formData
